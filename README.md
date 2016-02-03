@@ -21,6 +21,6 @@ src/
 ### Usage
 ```
 USAGE:
-    license-add <LICENSE>   Add LICENSE to the current directory
-    license-add help        Print this help message
+    license-add <LICENSE> [OUTPUT_FILE]   Add LICENSE to OUTPUT_FILE xor LICENSE
+    license-add help                      Print this help message
 ```
