@@ -22,5 +22,6 @@ src/
 ```
 USAGE:
     license-add <LICENSE> [OUTPUT_FILE]   Add LICENSE to OUTPUT_FILE xor LICENSE
+    license-add list                      List all licenses in ~/.config/license-add
     license-add help                      Print this help message
 ```
