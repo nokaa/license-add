@@ -7,15 +7,21 @@ function echo_help() {
     license-add help                      Print this help message"
 }
 
+if [ "$XDG_CONFIG_HOME" == "" ]; then
+        CONFIG=~/.config/license-add
+else
+        CONFIG=$XDG_CONFIG_HOME/license-add
+fi
+
 if [ "$1" == "help" ]; then
         echo_help;
 elif [ "$1" == "list" ]; then
-        ls ~/.config/license-add;
-elif [ -f ~/.config/license-add/$1 ]; then
+        ls $CONFIG;
+elif [ -f $CONFIG/$1 ]; then
         if [ "$2" == "" ]; then
-                cp ~/.config/license-add/$1 LICENSE;
+                cp $CONFIG/$1 LICENSE;
         else
-                cp ~/.config/license-add/$1 $2;
+                cp $CONFIG/$1 $2;
         fi
 else
         echo "Invalid license:" $1;
